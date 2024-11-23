@@ -1,0 +1,8 @@
+version: '3'
+
+tasks:
+  test:
+    aliases: [t]
+    cmds:
+      - find . -path './.git' -prune -o -name "*.sh" -exec shfmt -w {} \;
+      - shellcheck -x -s bash -f gcc $(find . -path './.git' -prune -o -name "*.sh" -print)

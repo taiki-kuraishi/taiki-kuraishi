@@ -1,0 +1,21 @@
+version: '3'
+
+vars:
+  GIT_SHELL_SCRIPTS_DIR: ../git
+
+tasks:
+  select_git_switch:
+    aliases: [sgs]
+    cmds:
+      - sh {{ .GIT_SHELL_SCRIPTS_DIR }}/select_git_switch.sh
+    interactive: true
+  remove-local-branches:
+    aliases: [rlb]
+    desc: "remove local branches"
+    cmds:
+      - sh {{ .GIT_SHELL_SCRIPTS_DIR }}/remove_local_branches.sh
+  gadd:
+    aliases: [ga]
+    desc: "gadd"
+    cmds:
+      - sh {{ .GIT_SHELL_SCRIPTS_DIR }}/gadd.sh

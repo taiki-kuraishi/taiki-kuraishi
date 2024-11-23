@@ -4,3 +4,7 @@ includes:
   docker:
     taskfile: ../Taskfiles/docker.yml
     flatten: true
+  git:
+    taskfile: ../Taskfiles/git.yml
+    flatten: true
+    interactive: true
