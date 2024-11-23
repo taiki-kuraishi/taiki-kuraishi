@@ -1,0 +1,27 @@
+[alias]
+	a = add
+	aa = add --all
+	br = branch
+	cl = clone
+	cm = commit
+	cma = commit --amend
+	cman = commit --amend --no-edit
+	cmanm = commit --amend --no-edit -m
+	cmm = commit -m
+	co = checkout
+	df = diff
+	f = fetch
+	fpa = fetch --prune --all
+	lg = log
+	m = merge
+	p = push
+	pl = pull
+	po = pull origin
+	r = reset
+	rpo = remote prune origin
+	rsh = reset --soft HEAD^
+	s = status
+	sh = stash
+	ss = status --short
+[ghq]
+	root = ~/Documents/GitHub
