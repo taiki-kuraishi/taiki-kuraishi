@@ -1,0 +1,6 @@
+version: '3'
+
+includes:
+  docker:
+    taskfile: ../Taskfiles/docker.yml
+    flatten: true

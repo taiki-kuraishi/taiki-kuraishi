@@ -1,0 +1,30 @@
+version: '3'
+
+tasks:
+  docker-exec:
+    aliases: [de]
+    desc: "select container and exec shell"
+    cmds:
+      - docker exec -it $(docker ps | peco | cut -d " " -f 1) ash
+    interactive: true
+
+  docker-logs:
+    aliases: [dl]
+    desc: "select container and show logs"
+    cmds:
+      - docker logs -f $(docker ps | peco | cut -d " " -f 1)
+    interactive: true
+
+  docker-remove:
+    aliases: [dr]
+    desc: "select container and remove"
+    cmds:
+      - docker rm -f $(docker ps | peco | cut -d " " -f 1)
+    interactive: true
+
+  docker-all-remove:
+    aliases: [dar]
+    desc: "remove all containers"
+    cmds:
+      - docker rm -f $(docker ps -a -q)
+    interactive: true
